@@ -21,13 +21,13 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
 
           {/* AFCL Logo */}
-          <a href="#" className="flex items-center">
-            <img
-              src="/afcl-logo.svg"
-              alt="AFCL - Afri Food Connect & Logistics"
-              className="h-24 w-auto object-contain"
-            />
-          </a>
+<a href="#" className="flex items-center">
+  <img
+    src="/AFCL-logo.svg"
+    alt="AFCL - Afri Food Connect & Logistics"
+    className="h-24 w-auto object-contain"
+  />
+</a>
 
           {/* Navigation Links */}
           <div className="hidden items-center gap-8 text-sm text-white/70 lg:flex">
