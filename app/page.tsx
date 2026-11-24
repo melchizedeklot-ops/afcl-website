@@ -145,7 +145,11 @@ const FAQ = [
   },
   {
     q: "How do drivers join?",
-    a: "Register as a driver in the app and add your vehicle and documents. Once your account is verified you can accept delivery jobs near you.",
+    a: "Register as a driver in the app and add your vehicle and documents. Once your account is verified you can accept delivery jobs near you. See the next question for what you need.",
+  },
+  {
+    q: "What do I need to register as a driver?",
+    a: "A valid driver's licence, a government ID (NIN, international passport, voter's card or national ID card), a working phone number, and a vehicle you may legally use. In the app you enter your licence number and expiry date, your ID type and number, and your vehicle details (type, brand, model, colour and load capacity), and say whether the vehicle is yours, borrowed or a company's. You then upload a photo of your ID, a photo of your licence and a photo of your vehicle, and take a live selfie with the camera, because gallery photos are not accepted for the selfie. If the vehicle is borrowed or belongs to a company, you may be asked for an ownership or authorisation document. Insurance details are optional. Our team compares your selfie with your ID and checks your documents, and you are notified when you are verified. If something is not approved, we tell you why and you can upload it again. Only verified drivers can accept delivery jobs.",
   },
   {
     q: "What can I not send as a parcel?",
