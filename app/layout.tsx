@@ -52,6 +52,7 @@ const jsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/AFCL-logo.svg`,
   email: "info@afrifoodconnect.com",
+  sameAs: ["https://www.facebook.com/share/1Fx2MPAZ5o/"],
   areaServed: "NG",
   description:
     "A farm-to-table marketplace and delivery service connecting African farmers, buyers, businesses and logistics.",

@@ -5,6 +5,8 @@ import MotionBackground from "./components/MotionBackground";
 import ContactForm from "./components/ContactForm";
 
 const AFCL_APP_URL = "https://app.afrifoodconnect.com";
+const FACEBOOK_URL = "https://www.facebook.com/share/1Fx2MPAZ5o/";
+const WHATSAPP_URL = "https://chat.whatsapp.com/HpmEr4mBl7MBtNHwysjyxj";
 
 export default function Home() {
   return (
@@ -1291,6 +1293,28 @@ export default function Home() {
 
               </div>
 
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-black transition hover:bg-emerald-400"
+                >
+                  Join our WhatsApp community
+                </a>
+
+                <a
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium transition hover:bg-white/10"
+                >
+                  Follow us on Facebook
+                </a>
+
+              </div>
+
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
@@ -1381,6 +1405,24 @@ export default function Home() {
               >
                 Delete account
               </Link>
+
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-white"
+              >
+                Facebook
+              </a>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-white"
+              >
+                WhatsApp
+              </a>
 
               <a
                 href={AFCL_APP_URL}
