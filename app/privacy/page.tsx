@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <p>
         This Privacy Policy explains how {COMPANY_NAME} (&quot;AFCL&quot;,
         &quot;we&quot;, &quot;us&quot;), a company registered in Nigeria with
-        its registered office at PUT YOUR FULL REGISTERED ADDRESS HERE, CITY, STATE, NIGERIA, collects, uses and
+        its registered office at [REGISTERED ADDRESS], collects, uses and
         protects your personal data when you use the AFCL website, web app
         and mobile app (together, the &quot;Service&quot;). We handle personal
         data in line with the Nigeria Data Protection Act 2023 (&quot;NDPA&quot;).
@@ -29,40 +29,40 @@ export default function PrivacyPage() {
       <H2>2. What we collect</H2>
       <UL>
         <li>
-          <strong className="text-white">Account details:</strong> your name,
+          <strong className="text-[#0f3d2b]">Account details:</strong> your name,
           email address, phone number, role (buyer, farmer/seller or driver)
           and a password stored in hashed form.
         </li>
         <li>
-          <strong className="text-white">Delivery details:</strong> delivery
+          <strong className="text-[#0f3d2b]">Delivery details:</strong> delivery
           and pickup addresses and the map location they correspond to. We
           use your typed address to place the delivery pin. We use your
           device&apos;s GPS only if you choose to share it.
         </li>
         <li>
-          <strong className="text-white">Driver location:</strong> if you are
+          <strong className="text-[#0f3d2b]">Driver location:</strong> if you are
           a driver, the app shares your live location with AFCL and with the
           buyer while you have an active delivery, including when the app is
           in the background. A notification shows on your phone while this is
           happening. Location sharing stops when you have no active delivery.
         </li>
         <li>
-          <strong className="text-white">Orders and payments:</strong> items
+          <strong className="text-[#0f3d2b]">Orders and payments:</strong> items
           ordered, amounts, delivery status, payment status, wallet and cash
           records. Card and bank details are entered with our payment
           provider and are not stored by AFCL.
         </li>
         <li>
-          <strong className="text-white">Photos and documents:</strong>{" "}
+          <strong className="text-[#0f3d2b]">Photos and documents:</strong>{" "}
           product photos, profile photos and, for drivers, identity and
           vehicle documents you upload for verification.
         </li>
         <li>
-          <strong className="text-white">Messages:</strong> messages sent
+          <strong className="text-[#0f3d2b]">Messages:</strong> messages sent
           between buyers, sellers, drivers and AFCL support in the app.
         </li>
         <li>
-          <strong className="text-white">Device and usage data:</strong> a
+          <strong className="text-[#0f3d2b]">Device and usage data:</strong> a
           push-notification token, device type, language, and basic technical
           logs used to keep the Service secure and working.
         </li>
@@ -96,13 +96,13 @@ export default function PrivacyPage() {
       <p>We do not sell your personal data. We share it only as needed with:</p>
       <UL>
         <li>
-          <strong className="text-white">Other users:</strong> a buyer sees a
+          <strong className="text-[#0f3d2b]">Other users:</strong> a buyer sees a
           driver&apos;s name, vehicle and live position for their delivery. A
           driver and seller see the delivery address and contact number
           needed to complete an order.
         </li>
         <li>
-          <strong className="text-white">Service providers</strong> that work
+          <strong className="text-[#0f3d2b]">Service providers</strong> that work
           for us, including Paystack (payments), Google (maps, geocoding and
           routes), Cloudinary (image storage), Brevo (email), Expo and
           Google Firebase (push notifications), MongoDB Atlas, Render and
@@ -110,7 +110,7 @@ export default function PrivacyPage() {
           hosting).
         </li>
         <li>
-          <strong className="text-white">Authorities</strong> where the law
+          <strong className="text-[#0f3d2b]">Authorities</strong> where the law
           requires it or to protect people and property.
         </li>
       </UL>
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
 
       <H2>10. Contact</H2>
       <p>
-        {COMPANY_NAME}, PUT YOUR FULL REGISTERED ADDRESS HERE, CITY, STATE, NIGERIA, Nigeria. Email: <Mail />.
+        {COMPANY_NAME}, [REGISTERED ADDRESS], Nigeria. Email: <Mail />.
       </p>
     </LegalPage>
   );

@@ -15,27 +15,27 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "#06130F",
-          color: "#ffffff",
+          background: "#fbf8f1",
+          color: "#0f3d2b",
         }}
       >
         <div
           style={{
             fontSize: 28,
             letterSpacing: 8,
-            color: "#34d399",
+            color: "#8a6d26",
             textTransform: "uppercase",
           }}
         >
           Afri Food Connect & Logistics
         </div>
         <div style={{ fontSize: 84, fontWeight: 700, marginTop: 28, lineHeight: 1.05 }}>
-          Connecting African Agriculture
+          Fresh from the farm,
         </div>
-        <div style={{ fontSize: 84, fontWeight: 700, color: "#34d399", lineHeight: 1.05 }}>
-          to the World.
+        <div style={{ fontSize: 84, fontWeight: 700, color: "#8a6d26", lineHeight: 1.05 }}>
+          delivered to your door.
         </div>
-        <div style={{ fontSize: 30, marginTop: 40, color: "rgba(255,255,255,0.6)" }}>
+        <div style={{ fontSize: 30, marginTop: 40, color: "#5b6760" }}>
           afrifoodconnect.com
         </div>
       </div>

@@ -12,7 +12,7 @@ const TOPICS = [
 ];
 
 const field =
-  "w-full rounded-xl border border-white/15 bg-white/[0.04] px-4 py-3 text-white placeholder-white/30 outline-none transition focus:border-emerald-400";
+  "w-full rounded-xl border border-[#d9d2c0] bg-white px-4 py-3 text-[#1e2a23] placeholder-[#9aa39d] outline-none transition focus:border-[#0f3d2b] focus:ring-2 focus:ring-[#0f3d2b]/15";
 
 export default function ContactForm() {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">(
@@ -48,16 +48,16 @@ export default function ContactForm() {
 
   if (state === "sent") {
     return (
-      <div className="rounded-2xl border border-emerald-400/30 bg-emerald-400/[0.06] p-8 text-center">
-        <p className="text-xl font-semibold text-emerald-400">
+      <div className="rounded-2xl border border-[#1f6b46]/30 bg-[#eef4ee] p-8 text-center">
+        <p className="font-serif text-xl text-[#0f3d2b]">
           Thank you. Your message has been sent.
         </p>
-        <p className="mt-3 text-white/60">
+        <p className="mt-3 text-[#4a554e]">
           We will reply to the email address you gave us.
         </p>
         <button
           onClick={() => setState("idle")}
-          className="mt-6 rounded-full border border-white/20 px-6 py-2.5 text-sm transition hover:bg-white/10"
+          className="mt-6 rounded-full border border-[#0f3d2b]/30 px-6 py-2.5 text-sm text-[#0f3d2b] transition hover:bg-[#0f3d2b]/5"
         >
           Send another message
         </button>
@@ -79,7 +79,7 @@ export default function ContactForm() {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className="mb-2 block text-sm text-white/60">Your name</span>
+          <span className="mb-2 block text-sm font-medium text-[#3f4b44]">Your name</span>
           <input
             name="name"
             required
@@ -91,7 +91,7 @@ export default function ContactForm() {
           />
         </label>
         <label className="block">
-          <span className="mb-2 block text-sm text-white/60">Email</span>
+          <span className="mb-2 block text-sm font-medium text-[#3f4b44]">Email</span>
           <input
             name="email"
             type="email"
@@ -106,7 +106,7 @@ export default function ContactForm() {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className="mb-2 block text-sm text-white/60">
+          <span className="mb-2 block text-sm font-medium text-[#3f4b44]">
             Phone (optional)
           </span>
           <input
@@ -119,12 +119,12 @@ export default function ContactForm() {
           />
         </label>
         <label className="block">
-          <span className="mb-2 block text-sm text-white/60">
+          <span className="mb-2 block text-sm font-medium text-[#3f4b44]">
             What is this about?
           </span>
           <select name="topic" className={field} defaultValue={TOPICS[0]}>
             {TOPICS.map((t) => (
-              <option key={t} value={t} className="bg-[#06130F]">
+              <option key={t} value={t} className="bg-white">
                 {t}
               </option>
             ))}
@@ -133,7 +133,7 @@ export default function ContactForm() {
       </div>
 
       <label className="block">
-        <span className="mb-2 block text-sm text-white/60">Message</span>
+        <span className="mb-2 block text-sm font-medium text-[#3f4b44]">Message</span>
         <textarea
           name="message"
           required
@@ -146,7 +146,7 @@ export default function ContactForm() {
       </label>
 
       {state === "error" && (
-        <p role="alert" className="text-sm text-red-400">
+        <p role="alert" className="text-sm text-red-700">
           {error}
         </p>
       )}
@@ -154,7 +154,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state === "sending"}
-        className="w-full rounded-full bg-emerald-500 px-8 py-3.5 font-semibold text-black transition hover:bg-emerald-400 disabled:opacity-60 sm:w-auto"
+        className="w-full rounded-full bg-[#0f3d2b] px-8 py-3.5 font-semibold text-white transition hover:bg-[#0b2e20] disabled:opacity-60 sm:w-auto"
       >
         {state === "sending" ? "Sending..." : "Send message"}
       </button>

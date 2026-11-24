@@ -22,7 +22,7 @@ export default function DeleteAccountPage() {
       </p>
 
       <H2>How to request deletion</H2>
-      <ol className="list-decimal space-y-2 pl-6 marker:text-emerald-400">
+      <ol className="list-decimal space-y-2 pl-6 marker:text-[#b08d3c]">
         <li>
           Send an email to <Mail /> from the email address registered on your
           account. If you can&apos;t, tell us your registered phone number.
@@ -40,7 +40,7 @@ export default function DeleteAccountPage() {
       <p>
         <a
           href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
-          className="mt-2 inline-block rounded-full bg-emerald-500 px-7 py-3.5 font-medium text-black transition hover:bg-emerald-400"
+          className="mt-2 inline-block rounded-full bg-[#0f3d2b] px-7 py-3.5 font-semibold text-white transition hover:bg-[#0b2e20]"
         >
           Email a deletion request
         </a>
@@ -93,7 +93,7 @@ export default function DeleteAccountPage() {
         See our{" "}
         <a
           href="/privacy"
-          className="text-emerald-400 underline-offset-4 hover:underline"
+          className="font-medium text-[#0f3d2b] underline underline-offset-4"
         >
           Privacy Policy
         </a>{" "}

@@ -15,7 +15,7 @@ export default function TermsPage() {
         These Terms govern your use of the AFCL website, web app and mobile
         app (the &quot;Service&quot;), operated by {COMPANY_NAME}{" "}
         (&quot;AFCL&quot;, &quot;we&quot;), a company registered in Nigeria
-        with its registered office at PUT YOUR FULL REGISTERED ADDRESS HERE, CITY, STATE, NIGERIA. By creating an
+        with its registered office at [REGISTERED ADDRESS]. By creating an
         account or using the Service you agree to them.
       </p>
 
@@ -161,7 +161,7 @@ export default function TermsPage() {
 
       <H2>14. Contact</H2>
       <p>
-        {COMPANY_NAME}, PUT YOUR FULL REGISTERED ADDRESS HERE, CITY, STATE, NIGERIA, Nigeria. Email: <Mail />.
+        {COMPANY_NAME}, [REGISTERED ADDRESS], Nigeria. Email: <Mail />.
       </p>
     </LegalPage>
   );

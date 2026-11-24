@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "AFCL connects African agriculture, markets, businesses, and logistics through one technology-driven ecosystem. Buy farm-fresh food and get it delivered.",
+    "AFCL is a farm-to-table marketplace and delivery service. Buy fresh food directly from farmers, pay securely and follow your order on the map. Now opening in Kaduna, Nigeria.",
   applicationName: "AFCL",
   keywords: [
     "AFCL",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#06130F",
+  themeColor: "#0f3d2b",
 };
 
 const jsonLd = {
