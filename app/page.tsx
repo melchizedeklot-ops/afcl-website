@@ -47,6 +47,7 @@ function Eyebrow({ children, light = false }: { children: React.ReactNode; light
 const NAV = [
   { href: "#about", label: "Who we are" },
   { href: "#audiences", label: "What we do" },
+  { href: "#app", label: "The app" },
   { href: "#how-it-works", label: "How it works" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
@@ -54,6 +55,8 @@ const NAV = [
 
 const AUDIENCES = [
   {
+    img: "/images/buyer.jpg",
+    alt: "Fresh tomatoes, peppers, onions and greens at a market",
     label: "Buyers",
     title: "Fresh food, straight from the farm",
     points: [
@@ -64,6 +67,8 @@ const AUDIENCES = [
     ],
   },
   {
+    img: "/images/farmer.jpg",
+    alt: "A smiling farmer harvesting leafy greens in a field",
     label: "Farmers and sellers",
     title: "Reach buyers without the middleman",
     points: [
@@ -74,6 +79,8 @@ const AUDIENCES = [
     ],
   },
   {
+    img: "/images/driver.jpg",
+    alt: "A delivery driver handing a parcel to a customer",
     label: "Drivers",
     title: "Deliver nearby and earn",
     points: [
@@ -245,27 +252,42 @@ export default function Home() {
             </p>
           </div>
 
-          <aside className="rounded-3xl bg-[#0f3d2b] p-8 text-white shadow-2xl sm:p-10">
-            <Eyebrow light>Why people trust AFCL</Eyebrow>
-            <ul className="mt-7 space-y-6">
-              {[
-                { i: "shield" as const, t: "Secure payments", d: "Handled by Paystack. We never store your card details." },
-                { i: "pin" as const, t: "Live delivery tracking", d: "Follow your driver on the map from pickup to your door." },
-                { i: "leaf" as const, t: "Products checked first", d: "Listings are screened before they reach buyers." },
-                { i: "truck" as const, t: "Local drivers", d: "Delivery by drivers near you, from farm to table." },
-              ].map((x) => (
-                <li key={x.t} className="flex gap-4">
-                  <span className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#d9bd7a]">
-                    <Icon name={x.i} />
-                  </span>
-                  <span>
-                    <span className="block font-semibold">{x.t}</span>
-                    <span className="mt-1 block text-sm leading-6 text-white/70">{x.d}</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </aside>
+          <div className="relative">
+            <div className="overflow-hidden rounded-3xl border border-[#e4ddcc] bg-white shadow-2xl">
+              <img
+                src="/images/hero.jpg"
+                alt="A smiling farmer holding a crate of fresh tomatoes, peppers and greens"
+                className="aspect-[4/3] w-full object-cover object-top"
+                width={1600}
+                height={941}
+              />
+            </div>
+            <div className="absolute -bottom-5 left-6 rounded-2xl bg-[#0f3d2b] px-5 py-3 text-sm font-medium text-white shadow-xl">
+              <span className="text-[#d9bd7a]">Now opening</span> in Kaduna
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= TRUST STRIP ================= */}
+      <section className="border-y border-[#e4ddcc] bg-white">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+          {[
+            { i: "shield" as const, t: "Secure payments", d: "Handled by Paystack. We never store your card details." },
+            { i: "pin" as const, t: "Live delivery tracking", d: "Follow your driver on the map from pickup to your door." },
+            { i: "leaf" as const, t: "Products checked first", d: "Listings are screened before they reach buyers." },
+            { i: "truck" as const, t: "Local drivers", d: "Delivery by drivers near you, from farm to table." },
+          ].map((x) => (
+            <div key={x.t} className="flex gap-4">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#0f3d2b] text-[#d9bd7a]">
+                <Icon name={x.i} />
+              </span>
+              <span>
+                <span className="block font-serif text-lg text-[#0f3d2b]">{x.t}</span>
+                <span className="mt-1 block text-sm leading-6 text-[#5b6760]">{x.d}</span>
+              </span>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -329,8 +351,10 @@ export default function Home() {
             {AUDIENCES.map((a) => (
               <article
                 key={a.label}
-                className="flex flex-col rounded-3xl border border-[#e4ddcc] bg-white p-8 shadow-sm"
+                className="flex flex-col overflow-hidden rounded-3xl border border-[#e4ddcc] bg-white shadow-sm"
               >
+                <img src={a.img} alt={a.alt} className="h-52 w-full object-cover" width={800} height={450} />
+                <div className="flex flex-1 flex-col p-8">
                 <Eyebrow>{a.label}</Eyebrow>
                 <h3 className="mt-4 font-serif text-2xl leading-snug text-[#0f3d2b]">
                   {a.title}
@@ -351,8 +375,56 @@ export default function Home() {
                 >
                   Get started →
                 </a>
+                </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= APP SCREENS ================= */}
+      <section id="app" className="bg-[#eef4ee] py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <Eyebrow>The app</Eyebrow>
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#0f3d2b] sm:text-5xl">
+              Simple to use, from the first tap.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-[#4a554e]">
+              Shop fresh produce, follow your delivery live, and manage your
+              farm&apos;s orders, all in one app that works in your browser.
+            </p>
+          </div>
+
+          <div className="mt-14 grid items-start gap-10 sm:grid-cols-3">
+            {[
+              { src: "/images/app-shop.jpg", alt: "App screen showing a shop of fresh produce", t: "Shop fresh produce", d: "Browse what local farmers have today." },
+              { src: "/images/app-track.jpg", alt: "App screen showing live tracking of a delivery on a map", t: "Track your delivery", d: "Watch your driver on the map, step by step." },
+              { src: "/images/app-seller.jpg", alt: "App screen showing a seller's products and new orders", t: "Run your farm shop", d: "List products and manage orders in one place." },
+            ].map((x, i) => (
+              <figure key={x.t} className={`mx-auto max-w-[270px] text-center ${i === 1 ? "sm:mt-10" : ""}`}>
+                <div className="rounded-[2.2rem] bg-[#10201a] p-2.5 shadow-[0_24px_40px_-12px_rgba(15,61,43,0.45)]">
+                  <img src={x.src} alt={x.alt} className="aspect-[1024/1250] w-full rounded-[1.7rem] object-cover object-top" width={640} height={781} />
+                </div>
+                <figcaption className="mt-6">
+                  <span className="block font-serif text-xl text-[#0f3d2b]">{x.t}</span>
+                  <span className="mt-1 block text-sm leading-6 text-[#5b6760]">{x.d}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <p className="mt-10 text-center text-xs text-[#7a857d]">
+            Screens shown use sample data.
+          </p>
+
+          <div className="mt-8 text-center">
+            <a
+              href={AFCL_APP_URL}
+              className="inline-block rounded-full bg-[#0f3d2b] px-8 py-4 font-semibold text-white transition hover:bg-[#0b2e20]"
+            >
+              Open the app
+            </a>
           </div>
         </div>
       </section>
@@ -415,7 +487,10 @@ export default function Home() {
           <h2 className="mt-5 font-serif text-4xl leading-tight text-[#0f3d2b] sm:text-5xl">
             Kaduna first. Your city next.
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#4a554e]">
+          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-3xl border border-[#e4ddcc] shadow-xl">
+            <img src="/images/kaduna.jpg" alt="The Kaduna State gateway arch on a sunny day" className="aspect-[16/8] w-full object-cover" width={1600} height={800} loading="lazy" />
+          </div>
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-[#4a554e]">
             We are opening one city at a time so every order is delivered
             well. Not in Kaduna yet? Tell us where you are and we will let
             you know the day we arrive.
