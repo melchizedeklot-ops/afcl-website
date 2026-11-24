@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import MotionBackground from "./components/MotionBackground";
+import ContactForm from "./components/ContactForm";
 
-const AFCL_APP_URL = "https://afcl.netlify.app";
+const AFCL_APP_URL = "https://app.afrifoodconnect.com";
 
 export default function Home() {
   return (
@@ -65,6 +67,13 @@ export default function Home() {
               className="transition hover:text-white"
             >
               Impact
+            </a>
+
+            <a
+              href="#contact"
+              className="transition hover:text-white"
+            >
+              Contact
             </a>
 
           </div>
@@ -1232,6 +1241,68 @@ export default function Home() {
       </section>
 
       {/* ================================================= */}
+      {/* CONTACT */}
+      {/* ================================================= */}
+
+      <section
+        id="contact"
+        className="relative z-10 overflow-hidden py-24 sm:py-32"
+      >
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+
+            <div>
+
+              <p className="text-sm font-medium uppercase tracking-[0.3em] text-emerald-400">
+                Contact Us
+              </p>
+
+              <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
+                Let&apos;s talk.
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-white/60">
+                Questions about selling, buying, delivering or partnering
+                with AFCL? Send us a message and we will reply by email.
+              </p>
+
+              <div className="mt-8 space-y-3 text-white/70">
+
+                <p>
+                  General:{" "}
+                  <a
+                    href="mailto:info@afrifoodconnect.com"
+                    className="text-emerald-400 hover:underline"
+                  >
+                    info@afrifoodconnect.com
+                  </a>
+                </p>
+
+                <p>
+                  Support:{" "}
+                  <a
+                    href="mailto:support@afrifoodconnect.com"
+                    className="text-emerald-400 hover:underline"
+                  >
+                    support@afrifoodconnect.com
+                  </a>
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+              <ContactForm />
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================================================= */}
       {/* FOOTER */}
       {/* ================================================= */}
 
@@ -1245,7 +1316,7 @@ export default function Home() {
             <a href="#" className="flex items-center">
 
               <img
-                src="/afcl-logo.svg"
+                src="/AFCL-logo.svg"
                 alt="AFCL - Afri Food Connect & Logistics"
                 className="h-20 w-auto object-contain"
               />
@@ -1282,6 +1353,34 @@ export default function Home() {
               >
                 Impact
               </a>
+
+              <a
+                href="#contact"
+                className="transition hover:text-white"
+              >
+                Contact
+              </a>
+
+              <Link
+                href="/privacy"
+                className="transition hover:text-white"
+              >
+                Privacy
+              </Link>
+
+              <Link
+                href="/terms"
+                className="transition hover:text-white"
+              >
+                Terms
+              </Link>
+
+              <Link
+                href="/delete-account"
+                className="transition hover:text-white"
+              >
+                Delete account
+              </Link>
 
               <a
                 href={AFCL_APP_URL}
