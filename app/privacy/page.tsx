@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <p>
         This Privacy Policy explains how {COMPANY_NAME} (&quot;AFCL&quot;,
         &quot;we&quot;, &quot;us&quot;), a company registered in Nigeria with
-        its registered office at [REGISTERED ADDRESS], collects, uses and
+        its registered office at No. 3, First ECWA Church, Luwuna Kurama, Lere, Kaduna State, collects, uses and
         protects your personal data when you use the AFCL website, web app
         and mobile app (together, the &quot;Service&quot;). We handle personal
         data in line with the Nigeria Data Protection Act 2023 (&quot;NDPA&quot;).
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
 
       <H2>10. Contact</H2>
       <p>
-        {COMPANY_NAME}, [REGISTERED ADDRESS], Nigeria. Email: <Mail />.
+        {COMPANY_NAME}, No. 3, First ECWA Church, Luwuna Kurama, Lere, Kaduna State, Nigeria. Email: <Mail />.
       </p>
     </LegalPage>
   );

@@ -15,7 +15,7 @@ export default function TermsPage() {
         These Terms govern your use of the AFCL website, web app and mobile
         app (the &quot;Service&quot;), operated by {COMPANY_NAME}{" "}
         (&quot;AFCL&quot;, &quot;we&quot;), a company registered in Nigeria
-        with its registered office at [REGISTERED ADDRESS]. By creating an
+        with its registered office at No. 3, First ECWA Church, Luwuna Kurama, Lere, Kaduna State. By creating an
         account or using the Service you agree to them.
       </p>
 
@@ -161,7 +161,7 @@ export default function TermsPage() {
 
       <H2>14. Contact</H2>
       <p>
-        {COMPANY_NAME}, [REGISTERED ADDRESS], Nigeria. Email: <Mail />.
+        {COMPANY_NAME}, No. 3, First ECWA Church, Luwuna Kurama, Lere, Kaduna State, Nigeria. Email: <Mail />.
       </p>
     </LegalPage>
   );
