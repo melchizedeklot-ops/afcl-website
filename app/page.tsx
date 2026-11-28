@@ -53,6 +53,17 @@ const NAV = [
   { href: "#contact", label: "Contact" },
 ];
 
+/* ---------- demo videos ----------
+   Add a video by adding one line below. Use either:
+   - youtubeId: the part after "v=" in a YouTube link (upload as Unlisted), or
+   - file: a video placed in the "public/videos" folder, e.g. "/videos/how-to-order.mp4".
+   The "See it in action" block only appears once at least one video is listed. */
+const DEMO_VIDEOS: { title: string; text?: string; youtubeId?: string; file?: string }[] = [
+  // { title: "How to place an order", text: "From browsing to payment.", youtubeId: "XXXXXXXXXXX" },
+  // { title: "How a driver accepts a job", youtubeId: "XXXXXXXXXXX" },
+  // { title: "How a farmer adds a product", file: "/videos/add-product.mp4" },
+];
+
 const AUDIENCES = [
   {
     img: "/images/buyer.jpg",
@@ -468,6 +479,36 @@ export default function Home() {
               </li>
             ))}
           </ol>
+
+          {DEMO_VIDEOS.length > 0 ? (
+            <div className="mt-20">
+              <h3 className="font-serif text-3xl text-[#0f3d2b]">See it in action</h3>
+              <div className="mt-8 grid gap-8 sm:grid-cols-2">
+                {DEMO_VIDEOS.map((v) => (
+                  <figure key={v.title}>
+                    <div className="aspect-video overflow-hidden rounded-2xl border border-[#e4ddcc] bg-black">
+                      {v.youtubeId ? (
+                        <iframe
+                          src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
+                          title={v.title}
+                          loading="lazy"
+                          allow="accelerometer; encrypted-media; picture-in-picture"
+                          allowFullScreen
+                          className="h-full w-full"
+                        />
+                      ) : v.file ? (
+                        <video src={v.file} controls preload="none" playsInline className="h-full w-full" />
+                      ) : null}
+                    </div>
+                    <figcaption className="mt-3">
+                      <span className="block font-serif text-lg text-[#0f3d2b]">{v.title}</span>
+                      {v.text ? <span className="mt-1 block text-sm text-[#4a554e]">{v.text}</span> : null}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
 
