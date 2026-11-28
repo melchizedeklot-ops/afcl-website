@@ -202,14 +202,26 @@ export default function Home() {
                     {n.label}
                   </a>
                 ))}
+                <a
+                  href={`${AFCL_APP_URL}/auth/register`}
+                  className="mt-1 block rounded-xl bg-[#0f3d2b] px-4 py-3 text-center text-sm font-semibold text-white"
+                >
+                  Register
+                </a>
               </div>
             </details>
 
             <a
-              href={AFCL_APP_URL}
-              className="rounded-full bg-[#0f3d2b] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0b2e20]"
+              href={`${AFCL_APP_URL}/auth/login`}
+              className="rounded-full border border-[#0f3d2b] px-4 py-2 text-sm font-semibold text-[#0f3d2b] transition hover:bg-[#eef4ee] sm:px-5 sm:py-2.5"
             >
-              Open the app
+              Log in
+            </a>
+            <a
+              href={`${AFCL_APP_URL}/auth/register`}
+              className="hidden rounded-full bg-[#0f3d2b] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0b2e20] sm:inline-block"
+            >
+              Register
             </a>
           </div>
         </div>
